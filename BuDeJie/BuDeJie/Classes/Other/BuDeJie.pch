@@ -1,0 +1,21 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by 姚英 on 16/5/26.
+//  Copyright © 2016年 yy. All rights reserved.
+//
+
+
+
+
+
+#ifdef DEBUG
+#define YYFunc YYLog(@"%s",__func__)
+#define YYLog(...) NSLog(__VA_ARGS__)
+
+#else
+#define XMGFunc
+#define XMGLog(...) 
+
+#endif

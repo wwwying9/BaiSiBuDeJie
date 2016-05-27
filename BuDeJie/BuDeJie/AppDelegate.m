@@ -21,16 +21,11 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    YYTabBarController *bar = [[YYTabBarController alloc]init];
+    YYTabBarController *bar = [[YYTabBarController alloc]init];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass([YYADViewController class]) bundle:nil];
-    
-    YYADViewController *bar = [sb instantiateInitialViewController];
-//    YYADViewController *bar =
-    
-//    YYADViewController *bar = [[YYADViewController alloc]init];
-    
-//    bar.view.backgroundColor = [UIColor redColor];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass([YYADViewController class]) bundle:nil];
+//    YYADViewController *bar = [sb instantiateInitialViewController];
+
     
     self.window.rootViewController = bar;
     

@@ -24,6 +24,7 @@
 		3784756E1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3784756C1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard */; };
 		378475791CF5D2AF00A5B9F4 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475781CF5D2AF00A5B9F4 /* BuDeJieTests.m */; };
 		378475841CF5D2AF00A5B9F4 /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475831CF5D2AF00A5B9F4 /* BuDeJieUITests.m */; };
+		37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D16AE21CF8974600D87F1B /* YYSettingVC.m */; };
 		37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2D31CF7FBF6009F8C05 /* YYTempVC.m */; };
 		37EDA2DB1CF8208C009F8C05 /* YYADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2DA1CF8208C009F8C05 /* YYADViewController.m */; };
 		37EDA2DF1CF8439E009F8C05 /* YYADViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EDA2DE1CF8439E009F8C05 /* YYADViewController.storyboard */; };
@@ -83,6 +84,8 @@
 		378475BF1CF5EC3D00A5B9F4 /* YYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPublishViewController.m; sourceTree = "<group>"; };
 		378475CA1CF5F19D00A5B9F4 /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
 		378475CB1CF5F19D00A5B9F4 /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
+		37D16AE11CF8974600D87F1B /* YYSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSettingVC.h; sourceTree = "<group>"; };
+		37D16AE21CF8974600D87F1B /* YYSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSettingVC.m; sourceTree = "<group>"; };
 		37EDA2D21CF7FBF6009F8C05 /* YYTempVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTempVC.h; sourceTree = "<group>"; };
 		37EDA2D31CF7FBF6009F8C05 /* YYTempVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTempVC.m; sourceTree = "<group>"; };
 		37EDA2D91CF8208C009F8C05 /* YYADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYADViewController.h; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 			children = (
 				378475B81CF5EB6D00A5B9F4 /* YYMeViewController.h */,
 				378475B91CF5EB6D00A5B9F4 /* YYMeViewController.m */,
+				37D16AE11CF8974600D87F1B /* YYSettingVC.h */,
+				37D16AE21CF8974600D87F1B /* YYSettingVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -582,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3748B8E81CF74C8D003CFD33 /* UIView+Frame.m in Sources */,
+				37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */,
 				3748B8E11CF7126B003CFD33 /* YYTabBar.m in Sources */,
 				3748B8E01CF71267003CFD33 /* YYTabBarController.m in Sources */,
 				3748B8F71CF764D6003CFD33 /* UIBarButtonItem+YYItem.m in Sources */,

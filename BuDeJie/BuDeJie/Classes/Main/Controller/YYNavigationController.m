@@ -9,7 +9,7 @@
 #import "YYNavigationController.h"
 #import "UIImage+Render.h"
 
-@interface YYNavigationController ()
+@interface YYNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -25,6 +25,9 @@
     attr[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
     
     Bar.titleTextAttributes = attr;
+    
+//    [Bar setBackIndicatorImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]];
+    [Bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 
@@ -57,13 +60,8 @@
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         [btn setTitle:@"返回" forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-//        btn.backgroundColor = [UIColor blueColor];
 
         [btn sizeToFit];
-        
-//        UIView *view = [[UIView alloc]initWithFrame:btn.bounds];
-//        [view addSubview:btn];
-//        view.backgroundColor = [UIColor orangeColor];
         
         [btn setContentEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
         
@@ -85,6 +83,23 @@
 //    attr[NSFontAttributeName] = [UIFont boldSystemFontOfSize:25];
 //    self.navigationBar.titleTextAttributes = attr;
     
+    //通过打印手势得到action.
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    
+     pan.delegate = self;
+    self.interactivePopGestureRecognizer.enabled = NO;
+    
+    
+    /*
+     //    NSLog(@"%@",self.interactivePopGestureRecognizer);
+     2016-05-27 22:45:19.246 BuDeJie[1955:84395] <UIScreenEdgePanGestureRecognizer: 0x7ff968f8d200; state = Possible; delaysTouchesBegan = YES; view = <UILayoutContainerView 0x7ff968e39530>; target= <(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7ff968f8cc20>)>>
+     */
+}
+
+// 不实现这个代理方法会发生假死状态
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    return self.childViewControllers.count > 1;
 }
 
 @end

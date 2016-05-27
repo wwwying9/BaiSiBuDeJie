@@ -8,6 +8,7 @@
 
 #import "YYMeViewController.h"
 #import "UIBarButtonItem+YYItem.h"
+#import "YYSettingVC.h"
 
 @interface YYMeViewController ()
 
@@ -21,6 +22,8 @@
     self.navigationItem.title = @"我的";
     [self setNavigation];
     
+//    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
 }
 
 -(void)setNavigation{
@@ -33,10 +36,12 @@
     self.navigationItem.rightBarButtonItems = @[setting, moon];
 }
 
+
+#pragma mark - button点击方法
 - (void)setting:(UIButton *)btn{
     YYFunc;
     
-    UIViewController *vc = [[UIViewController alloc]init];
+    YYSettingVC *vc = [[YYSettingVC alloc]init];
     vc.view.backgroundColor = [UIColor orangeColor];
     
     vc.hidesBottomBarWhenPushed = YES;

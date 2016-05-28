@@ -8,6 +8,7 @@
 
 #import "YYNewViewController.h"
 #import "UIBarButtonItem+YYItem.h"
+#import "YYNewListController.h"
 
 @interface YYNewViewController ()
 
@@ -27,7 +28,9 @@
 }
 
 - (void)list{
+    YYNewListController *listTVC = [[YYNewListController alloc]init];
     
+    [self.navigationController pushViewController:listTVC animated:YES];
 }
 
 

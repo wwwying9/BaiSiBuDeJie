@@ -51,7 +51,12 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.childViewControllers.count > 0 ) {
-
+        
+        //隐藏bar
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        
+        //设置返回按钮
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [btn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];

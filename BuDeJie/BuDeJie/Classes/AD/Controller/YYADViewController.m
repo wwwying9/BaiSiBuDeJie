@@ -69,7 +69,12 @@
         
         if (_ADModel.w == 0) return ;
         if (_ADModel.h == 0) return ;
-        CGFloat h = YYScreenW / _ADModel.w * _ADModel.h;
+        
+//        if (_ADModel.w / _ADModel.h ) {
+//            <#statements#>
+//        }
+//        CGFloat h = YYScreenW / _ADModel.w * _ADModel.h;
+        CGFloat h = YYScreenW * _ADModel.h / _ADModel.w;
         CGFloat w = YYScreenW;
         
         

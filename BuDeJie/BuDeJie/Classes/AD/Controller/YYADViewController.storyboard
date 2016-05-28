@@ -20,6 +20,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-BY-AIG">
                                 <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-aK-GMA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-e2-OAY">
                                 <rect key="frame" x="240" y="40" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.58836206896551724" colorSpace="calibratedRGB"/>
@@ -38,17 +42,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rKo-bl-qaO" firstAttribute="top" secondItem="bBc-aK-GMA" secondAttribute="bottom" id="24p-Pn-B2Y"/>
                             <constraint firstAttribute="trailing" secondItem="8bC-e2-OAY" secondAttribute="trailing" constant="20" id="4Uf-Xj-qUr"/>
                             <constraint firstItem="8bC-e2-OAY" firstAttribute="top" secondItem="mQP-Pn-dGa" secondAttribute="bottom" constant="20" id="Adw-zT-Web"/>
                             <constraint firstItem="rsG-BY-AIG" firstAttribute="top" secondItem="mQP-Pn-dGa" secondAttribute="bottom" id="NZi-vJ-E7f"/>
+                            <constraint firstItem="bBc-aK-GMA" firstAttribute="top" secondItem="KYx-j8-1Wp" secondAttribute="top" id="QOT-6f-JMG"/>
                             <constraint firstItem="rsG-BY-AIG" firstAttribute="leading" secondItem="KYx-j8-1Wp" secondAttribute="leading" id="ZAH-5i-7hy"/>
                             <constraint firstItem="rKo-bl-qaO" firstAttribute="top" secondItem="rsG-BY-AIG" secondAttribute="bottom" id="b4v-nb-LGl"/>
+                            <constraint firstItem="bBc-aK-GMA" firstAttribute="leading" secondItem="KYx-j8-1Wp" secondAttribute="leading" id="cpj-Mg-zGY"/>
+                            <constraint firstAttribute="trailing" secondItem="bBc-aK-GMA" secondAttribute="trailing" id="ute-dT-XBp"/>
                             <constraint firstAttribute="trailing" secondItem="rsG-BY-AIG" secondAttribute="trailing" id="zvU-Ya-A7O"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backImage" destination="rsG-BY-AIG" id="Ais-KO-S3G"/>
+                        <outlet property="content" destination="bBc-aK-GMA" id="Tll-Mh-yaT"/>
                         <outlet property="jumpBtn" destination="8bC-e2-OAY" id="XeL-mY-9GY"/>
                     </connections>
                 </viewController>

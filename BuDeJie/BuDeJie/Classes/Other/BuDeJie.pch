@@ -8,7 +8,13 @@
 
 
 
+#define YYScreenH [UIScreen mainScreen].bounds.size.height
+#define YYScreenW [UIScreen mainScreen].bounds.size.width
 
+#define iphone4  (YYScreenH == 480)
+#define iphone5  (YYScreenH == 568)
+#define iphone6  (YYScreenH == 667)
+#define iphone6P (YYScreenH == 736)
 
 #ifdef DEBUG
 #define YYFunc YYLog(@"%s",__func__)

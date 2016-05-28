@@ -36,6 +36,8 @@
 		37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2D31CF7FBF6009F8C05 /* YYTempVC.m */; };
 		37EDA2DB1CF8208C009F8C05 /* YYADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2DA1CF8208C009F8C05 /* YYADViewController.m */; };
 		37EDA2DF1CF8439E009F8C05 /* YYADViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EDA2DE1CF8439E009F8C05 /* YYADViewController.storyboard */; };
+		37F974B71CF9D5AF00AEBF5F /* YYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974B61CF9D5AF00AEBF5F /* YYHttpTool.m */; };
+		37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974B91CF9E29100AEBF5F /* YYADModel.m */; };
 		4D745B68824CBD0DD984D2BB /* libPods-BuDeJieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E25791D8137EB168242D5C83 /* libPods-BuDeJieUITests.a */; };
 		E2562096EAB1F760A4727176 /* libPods-BuDeJieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AE77877CA7D3C50852AD0F /* libPods-BuDeJieTests.a */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,10 @@
 		37EDA2D91CF8208C009F8C05 /* YYADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYADViewController.h; sourceTree = "<group>"; };
 		37EDA2DA1CF8208C009F8C05 /* YYADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYADViewController.m; sourceTree = "<group>"; };
 		37EDA2DE1CF8439E009F8C05 /* YYADViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYADViewController.storyboard; sourceTree = "<group>"; };
+		37F974B51CF9D5AF00AEBF5F /* YYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHttpTool.h; sourceTree = "<group>"; };
+		37F974B61CF9D5AF00AEBF5F /* YYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHttpTool.m; sourceTree = "<group>"; };
+		37F974B81CF9E29100AEBF5F /* YYADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYADModel.h; sourceTree = "<group>"; };
+		37F974B91CF9E29100AEBF5F /* YYADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYADModel.m; sourceTree = "<group>"; };
 		69C28B2BAC0CFB1AEBE73172 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		6BBBB387C85011E96E96BD93 /* Pods-BuDeJieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJieTests/Pods-BuDeJieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DB8E995D1D94AEF91B55B01 /* Pods-BuDeJieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJieUITests/Pods-BuDeJieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -445,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				3748B8E51CF71D8D003CFD33 /* BuDeJie.pch */,
+				37F974B41CF9D5A400AEBF5F /* Tools */,
 				378475C91CF5F18000A5B9F4 /* Category */,
 			);
 			path = Other;
@@ -500,6 +507,8 @@
 		37EDA2D71CF81F46009F8C05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37F974B81CF9E29100AEBF5F /* YYADModel.h */,
+				37F974B91CF9E29100AEBF5F /* YYADModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +518,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		37F974B41CF9D5A400AEBF5F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				37F974B51CF9D5AF00AEBF5F /* YYHttpTool.h */,
+				37F974B61CF9D5AF00AEBF5F /* YYHttpTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		A3964AE4A07909DA2818F356 /* Pods */ = {
@@ -796,6 +814,7 @@
 				3748B8E81CF74C8D003CFD33 /* UIView+Frame.m in Sources */,
 				37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */,
 				3748B8E11CF7126B003CFD33 /* YYTabBar.m in Sources */,
+				37F974B71CF9D5AF00AEBF5F /* YYHttpTool.m in Sources */,
 				3748B8E01CF71267003CFD33 /* YYTabBarController.m in Sources */,
 				3748B8F71CF764D6003CFD33 /* UIBarButtonItem+YYItem.m in Sources */,
 				37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */,
@@ -806,6 +825,7 @@
 				3748B8D91CF7104D003CFD33 /* YYMeViewController.m in Sources */,
 				3748B8DA1CF7104D003CFD33 /* YYNewViewController.m in Sources */,
 				3748B8DB1CF7104D003CFD33 /* YYPublishViewController.m in Sources */,
+				37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */,
 				3748B8DC1CF7104D003CFD33 /* AppDelegate.m in Sources */,
 				3748B8D31CF71039003CFD33 /* UIImage+Render.m in Sources */,
 				37EDA2DB1CF8208C009F8C05 /* YYADViewController.m in Sources */,

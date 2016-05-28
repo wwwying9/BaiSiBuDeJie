@@ -8,22 +8,26 @@
 
 #import "YYADViewController.h"
 #import "YYTabBarController.h"
+#import <MJExtension.h>
+//#import <AFNetworking.h>
+#import "YYHttpTool.h"
+#import "YYADModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-#define YYScreenH [UIScreen mainScreen].bounds.size.height
-#define YYScreenW [UIScreen mainScreen].bounds.size.width
+#define XMGCode2 @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGULPxnz3vndtkQW08nau_I1Y1P1Rhmhwz5Hb8nBuL5HDknWRhTA_qmvqVQhGGUhI_py4MQhF1TvChmgKY5H6hmyPW5RFRHzuET1dGULnhuAN85HchUy7s5HDhIywGujY3P1n3mWb1PvDLnvF-Pyf4mHR4nyRvmWPBmhwBPjcLPyfsPHT3uWm4FMPLpHYkFh7sTA-b5yRzPj6sPvRdFhPdTWYsFMKzuykEmyfqnauGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiu9mLfqHbD_H70hTv6qnHn1PauVmynqnjclnj0lnj0lnj0lnj0lnj0hThYqniuVujYkFhkC5HRvnB3dFh7spyfqnW0srj64nBu9TjYsFMub5HDhTZFEujdzTLK_mgPCFMP85Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuBnHfdnjD4rjnvPWYkFh7sTZu-TWY1QW68nBuWUHYdnHchIAYqPHDzFhqsmyPGIZbqniuYThuYTjd1uAVxnz3vnzu9IjYzFh6qP1RsFMws5y-fpAq8uHT_nBuYmycqnau1IjYkPjRsnHb3n1mvnHDkQWD4niuVmybqniu1uy3qwD-HQDFKHakHHNn_HR7fQ7uDQ7PcHzkHiR3_RYqNQD7jfzkPiRn_wdKHQDP5HikPfRb_fNc_NbwPQDdRHzkDiNchTvwW5HnvPj0zQWndnHRvnBsdPWb4ri3kPW0kPHmhmLnqPH6LP1ndm1-WPyDvnHKBrAw9nju9PHIhmH9WmH6zrjRhTv7_5iu85HDhTvd15HDhTLTqP1RsFh4ETjYYPW0sPzuVuyYqn1mYnjc8nWbvrjTdQjRvrHb4QWDvnjDdPBuk5yRzPj6sPvRdgvPsTBu_my4bTvP9TARqnam"
 
-#define iphone4  (YYScreenH == 480)
-#define iphone5  (YYScreenH == 568)
-#define iphone6  (YYScreenH == 667)
-#define iphone6P (YYScreenH == 736)
 
 @interface YYADViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImage;
+//@property (weak, nonatomic) IBOutlet UIImageView *ADImage;
+@property (weak, nonatomic) IBOutlet UIView *content;
 
 /// 返回倒计时
 @property(nonatomic, weak) NSTimer *timer;
+/// <#annotate#>
+@property(nonatomic, strong) YYADModel *ADModel;
 @end
 
 @implementation YYADViewController
@@ -44,6 +48,38 @@
     };
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(jump) userInfo:nil repeats:YES];
+    
+
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    
+    //ori_curl 连接地址 w_picurl 图片地址 w h
+    
+    // 2.创建请求参数:字典
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"code2"] = XMGCode2;
+    
+    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript", nil];
+    
+    // 3.发送请求(get,post)
+    [mgr GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+       
+        responseObject = [responseObject[@"ad"] lastObject];
+        _ADModel = [YYADModel mj_objectWithKeyValues:responseObject];
+//        NSLog(@"%@",ADModel.w_picurl);
+        
+        if (_ADModel.w == 0) return ;
+        if (_ADModel.h == 0) return ;
+        CGFloat h = YYScreenW / _ADModel.w * _ADModel.h;
+        CGFloat w = YYScreenW;
+        
+        
+        UIImageView *ADImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, w,h )];
+        [self.content addSubview:ADImage];
+        [ADImage sd_setImageWithURL:[NSURL URLWithString:_ADModel.w_picurl]];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"err = %@",error);
+    }];
     
     
 

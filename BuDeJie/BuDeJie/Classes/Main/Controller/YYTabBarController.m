@@ -76,7 +76,9 @@
     [self addChildViewController:friendTrend];
     
     //我
-    YYNavigationController *me = [YYNavigationController navigationWithRoot:NSStringFromClass([YYMeViewController class]) title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
+    YYNavigationController *me = [YYNavigationController navigationWithRoot:NSStringFromClass([YYMeViewController class]) storyboardName:NSStringFromClass([YYMeViewController class]) title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
+    
+//    YYNavigationController *me = [YYNavigationController navigationWithRoot:NSStringFromClass([YYMeViewController class]) title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
     [self addChildViewController:me];
     
 }

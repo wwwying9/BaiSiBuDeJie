@@ -48,6 +48,26 @@
 }
 
 
++(instancetype)navigationWithRoot:(NSString *)controller storyboardName:(NSString *)StoryboardName title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage{
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:StoryboardName bundle:nil];
+//    Class obj = NSClassFromString(controller);
+    id vc = [sb instantiateInitialViewController];
+    
+    YYNavigationController *navC = [[self alloc] initWithRootViewController:(UIViewController *)vc];
+    
+    navC.tabBarItem.title = title;
+    
+    navC.tabBarItem.image = [UIImage imageNameWithOriginal:image];
+    
+    navC.tabBarItem.selectedImage = [UIImage imageNameWithOriginal:selectImage];
+    
+    return navC;
+}
+
+
+
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.childViewControllers.count > 0 ) {

@@ -23,7 +23,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    NSLog(@"%@",NSStringFromCGRect( self.iconImage.frame));
+//    NSLog(@"%@",NSStringFromCGRect( self.iconImage.frame));
     
     self.iconImage.layer.cornerRadius = self.iconImage.frame.size.width *0.5;
     self.iconImage.layer.masksToBounds = YES;

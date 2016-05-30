@@ -7,6 +7,7 @@
 //
 
 
+#import "UIView+Frame.h"
 
 #define YYScreenH [UIScreen mainScreen].bounds.size.height
 #define YYScreenW [UIScreen mainScreen].bounds.size.width

@@ -12,4 +12,6 @@
 
 +(instancetype)navigationWithRoot:(NSString *)controller title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage;
 
++(instancetype)navigationWithRoot:(NSString *)controller storyboardName:(NSString *)StoryboardName title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage;
+
 @end

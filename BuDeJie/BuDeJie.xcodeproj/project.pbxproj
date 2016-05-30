@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		024FD17A17DEEC99906430CE /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36AF245B4C87DD191B62256 /* libPods-BuDeJie.a */; };
-		3745F3D01CFC252000B34404 /* YYSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */; };
+		3745F3D01CFC252000B34404 /* YYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3745F3CF1CFC252000B34404 /* YYMeViewController.storyboard */; };
+		3745F3D21CFC2F7D00B34404 /* YYSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3745F3D11CFC2F7D00B34404 /* YYSettingVC.storyboard */; };
+		3745F3D81CFC7A8F00B34404 /* YYMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3745F3D71CFC7A8F00B34404 /* YYMeModel.m */; };
+		3745F3DC1CFC7C1C00B34404 /* YYMeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3745F3DA1CFC7C1C00B34404 /* YYMeCollectionCell.m */; };
+		3745F3DD1CFC7C1C00B34404 /* YYMeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3745F3DB1CFC7C1C00B34404 /* YYMeCollectionCell.xib */; };
 		3748B8D31CF71039003CFD33 /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475CB1CF5F19D00A5B9F4 /* UIImage+Render.m */; };
 		3748B8D51CF7104D003CFD33 /* YYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748B8CE1CF70EE9003CFD33 /* YYNavigationController.m */; };
 		3748B8D71CF7104D003CFD33 /* YYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475B01CF5DABC00A5B9F4 /* YYEssenceViewController.m */; };
@@ -65,7 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYSettingVC.storyboard; sourceTree = "<group>"; };
+		3745F3CF1CFC252000B34404 /* YYMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYMeViewController.storyboard; sourceTree = "<group>"; };
+		3745F3D11CFC2F7D00B34404 /* YYSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYSettingVC.storyboard; sourceTree = "<group>"; };
+		3745F3D61CFC7A8F00B34404 /* YYMeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMeModel.h; sourceTree = "<group>"; };
+		3745F3D71CFC7A8F00B34404 /* YYMeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMeModel.m; sourceTree = "<group>"; };
+		3745F3D91CFC7C1C00B34404 /* YYMeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMeCollectionCell.h; sourceTree = "<group>"; };
+		3745F3DA1CFC7C1C00B34404 /* YYMeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMeCollectionCell.m; sourceTree = "<group>"; };
+		3745F3DB1CFC7C1C00B34404 /* YYMeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYMeCollectionCell.xib; sourceTree = "<group>"; };
 		3748B8CD1CF70EE9003CFD33 /* YYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNavigationController.h; sourceTree = "<group>"; };
 		3748B8CE1CF70EE9003CFD33 /* YYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNavigationController.m; sourceTree = "<group>"; };
 		3748B8D01CF70F0C003CFD33 /* YYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTabBar.h; sourceTree = "<group>"; };
@@ -374,9 +384,10 @@
 			children = (
 				378475B81CF5EB6D00A5B9F4 /* YYMeViewController.h */,
 				378475B91CF5EB6D00A5B9F4 /* YYMeViewController.m */,
+				3745F3CF1CFC252000B34404 /* YYMeViewController.storyboard */,
 				37D16AE11CF8974600D87F1B /* YYSettingVC.h */,
 				37D16AE21CF8974600D87F1B /* YYSettingVC.m */,
-				3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */,
+				3745F3D11CFC2F7D00B34404 /* YYSettingVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +395,8 @@
 		378475A21CF5D65600A5B9F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3745F3D61CFC7A8F00B34404 /* YYMeModel.h */,
+				3745F3D71CFC7A8F00B34404 /* YYMeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +404,9 @@
 		378475A31CF5D65600A5B9F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3745F3D91CFC7C1C00B34404 /* YYMeCollectionCell.h */,
+				3745F3DA1CFC7C1C00B34404 /* YYMeCollectionCell.m */,
+				3745F3DB1CFC7C1C00B34404 /* YYMeCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,8 +700,10 @@
 				37D16AEE1CF8A96A00D87F1B /* LaunchImage-700@2x.png in Resources */,
 				37D16AF01CF8A96A00D87F1B /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				37D16AEC1CF8A96A00D87F1B /* LaunchImage-568h@2x.png in Resources */,
-				3745F3D01CFC252000B34404 /* YYSettingVC.storyboard in Resources */,
+				3745F3D21CFC2F7D00B34404 /* YYSettingVC.storyboard in Resources */,
+				3745F3D01CFC252000B34404 /* YYMeViewController.storyboard in Resources */,
 				37D16AEF1CF8A96A00D87F1B /* LaunchImage-800-667h@2x.png in Resources */,
+				3745F3DD1CFC7C1C00B34404 /* YYMeCollectionCell.xib in Resources */,
 				3784756B1CF5D2AF00A5B9F4 /* Assets.xcassets in Resources */,
 				37F974C71CF9F82200AEBF5F /* YYNewListCell.xib in Resources */,
 				37D16AF21CF8A96A00D87F1B /* LaunchImage@2x.png in Resources */,
@@ -845,11 +863,13 @@
 				3748B8F71CF764D6003CFD33 /* UIBarButtonItem+YYItem.m in Sources */,
 				37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */,
 				3748B8DE1CF710A0003CFD33 /* main.m in Sources */,
+				3745F3D81CFC7A8F00B34404 /* YYMeModel.m in Sources */,
 				3748B8D51CF7104D003CFD33 /* YYNavigationController.m in Sources */,
 				3748B8D71CF7104D003CFD33 /* YYEssenceViewController.m in Sources */,
 				3748B8D81CF7104D003CFD33 /* YYFriendTrendViewController.m in Sources */,
 				3748B8D91CF7104D003CFD33 /* YYMeViewController.m in Sources */,
 				3748B8DA1CF7104D003CFD33 /* YYNewViewController.m in Sources */,
+				3745F3DC1CFC7C1C00B34404 /* YYMeCollectionCell.m in Sources */,
 				37F974C61CF9F82200AEBF5F /* YYNewListCell.m in Sources */,
 				3748B8DB1CF7104D003CFD33 /* YYPublishViewController.m in Sources */,
 				37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */,

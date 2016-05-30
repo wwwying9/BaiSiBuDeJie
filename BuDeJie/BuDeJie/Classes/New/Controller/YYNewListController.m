@@ -11,6 +11,8 @@
 #import <MJExtension.h>
 #import "YYNewListModel.h"
 #import "YYNewListCell.h"
+#import <SVProgressHUD.h>
+
 
 @interface YYNewListController ()
 
@@ -24,6 +26,14 @@ static NSString  * const cellID = @"list";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+//    [SVProgressHUD showInfoWithStat];
+    [SVProgressHUD showWithStatus:@"加载中..." ];
+//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+//    [SVProgressHUD set]
+//    [SVProgressHUD showSuccessWithStatus:@"还在加载..."];
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"YYNewListCell" bundle:nil]  forCellReuseIdentifier:cellID];
@@ -40,9 +50,12 @@ static NSString  * const cellID = @"list";
     
     [YYHttpTool get:url params:dict success:^(NSDictionary *responseObj) {
         
-//        [responseObj writeToFile:@"/Users/yaoying/Desktop/百思不得姐/list.plist" atomically:YES];
 //        NSLog(@"%@",responseObj);
+        
+        [SVProgressHUD dismiss];
+        
         self.dataArray = [YYNewListModel mj_objectArrayWithKeyValuesArray:responseObj];
+        
         [self.tableView reloadData];
         
     } failure:^(NSError *error) {
@@ -51,13 +64,18 @@ static NSString  * const cellID = @"list";
 }
 
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super  viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+}
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
         return self.dataArray.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YYNewListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
@@ -69,6 +87,13 @@ static NSString  * const cellID = @"list";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YYFunc;
+//    YYNewListModel *model = self.dataArray[indexPath.row];
+
 }
 
 @end

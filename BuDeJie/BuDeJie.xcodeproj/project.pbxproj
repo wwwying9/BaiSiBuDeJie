@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		024FD17A17DEEC99906430CE /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36AF245B4C87DD191B62256 /* libPods-BuDeJie.a */; };
+		3745F3D01CFC252000B34404 /* YYSettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */; };
 		3748B8D31CF71039003CFD33 /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475CB1CF5F19D00A5B9F4 /* UIImage+Render.m */; };
 		3748B8D51CF7104D003CFD33 /* YYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748B8CE1CF70EE9003CFD33 /* YYNavigationController.m */; };
 		3748B8D71CF7104D003CFD33 /* YYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475B01CF5DABC00A5B9F4 /* YYEssenceViewController.m */; };
@@ -22,7 +23,6 @@
 		3748B8E81CF74C8D003CFD33 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748B8E71CF74C8D003CFD33 /* UIView+Frame.m */; };
 		3748B8F71CF764D6003CFD33 /* UIBarButtonItem+YYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748B8F61CF764D6003CFD33 /* UIBarButtonItem+YYItem.m */; };
 		3784756B1CF5D2AF00A5B9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3784756A1CF5D2AF00A5B9F4 /* Assets.xcassets */; };
-		3784756E1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3784756C1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard */; };
 		378475791CF5D2AF00A5B9F4 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475781CF5D2AF00A5B9F4 /* BuDeJieTests.m */; };
 		378475841CF5D2AF00A5B9F4 /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475831CF5D2AF00A5B9F4 /* BuDeJieUITests.m */; };
 		37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D16AE21CF8974600D87F1B /* YYSettingVC.m */; };
@@ -36,6 +36,7 @@
 		37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2D31CF7FBF6009F8C05 /* YYTempVC.m */; };
 		37EDA2DB1CF8208C009F8C05 /* YYADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EDA2DA1CF8208C009F8C05 /* YYADViewController.m */; };
 		37EDA2DF1CF8439E009F8C05 /* YYADViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EDA2DE1CF8439E009F8C05 /* YYADViewController.storyboard */; };
+		37F86C1D1CFBE359006A57F5 /* UIImage+YYimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F86C1C1CFBE359006A57F5 /* UIImage+YYimage.m */; };
 		37F974B71CF9D5AF00AEBF5F /* YYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974B61CF9D5AF00AEBF5F /* YYHttpTool.m */; };
 		37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974B91CF9E29100AEBF5F /* YYADModel.m */; };
 		37F974BD1CF9F56100AEBF5F /* YYNewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974BC1CF9F56100AEBF5F /* YYNewListController.m */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYSettingVC.storyboard; sourceTree = "<group>"; };
 		3748B8CD1CF70EE9003CFD33 /* YYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNavigationController.h; sourceTree = "<group>"; };
 		3748B8CE1CF70EE9003CFD33 /* YYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNavigationController.m; sourceTree = "<group>"; };
 		3748B8D01CF70F0C003CFD33 /* YYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTabBar.h; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 		378475611CF5D2AF00A5B9F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		378475621CF5D2AF00A5B9F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3784756A1CF5D2AF00A5B9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3784756D1CF5D2AF00A5B9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3784756F1CF5D2AF00A5B9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378475741CF5D2AF00A5B9F4 /* BuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		378475781CF5D2AF00A5B9F4 /* BuDeJieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuDeJieTests.m; sourceTree = "<group>"; };
@@ -114,6 +115,8 @@
 		37EDA2D91CF8208C009F8C05 /* YYADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYADViewController.h; sourceTree = "<group>"; };
 		37EDA2DA1CF8208C009F8C05 /* YYADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYADViewController.m; sourceTree = "<group>"; };
 		37EDA2DE1CF8439E009F8C05 /* YYADViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYADViewController.storyboard; sourceTree = "<group>"; };
+		37F86C1B1CFBE359006A57F5 /* UIImage+YYimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YYimage.h"; sourceTree = "<group>"; };
+		37F86C1C1CFBE359006A57F5 /* UIImage+YYimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YYimage.m"; sourceTree = "<group>"; };
 		37F974B51CF9D5AF00AEBF5F /* YYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHttpTool.h; sourceTree = "<group>"; };
 		37F974B61CF9D5AF00AEBF5F /* YYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHttpTool.m; sourceTree = "<group>"; };
 		37F974B81CF9E29100AEBF5F /* YYADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYADModel.h; sourceTree = "<group>"; };
@@ -203,7 +206,6 @@
 				378475611CF5D2AF00A5B9F4 /* AppDelegate.h */,
 				378475621CF5D2AF00A5B9F4 /* AppDelegate.m */,
 				3784756A1CF5D2AF00A5B9F4 /* Assets.xcassets */,
-				3784756C1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard */,
 				3784756F1CF5D2AF00A5B9F4 /* Info.plist */,
 				3784755E1CF5D2AF00A5B9F4 /* Supporting Files */,
 			);
@@ -374,6 +376,7 @@
 				378475B91CF5EB6D00A5B9F4 /* YYMeViewController.m */,
 				37D16AE11CF8974600D87F1B /* YYSettingVC.h */,
 				37D16AE21CF8974600D87F1B /* YYSettingVC.m */,
+				3745F3CF1CFC252000B34404 /* YYSettingVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,6 +481,8 @@
 		378475C91CF5F18000A5B9F4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				37F86C1B1CFBE359006A57F5 /* UIImage+YYimage.h */,
+				37F86C1C1CFBE359006A57F5 /* UIImage+YYimage.m */,
 				3748B8E61CF74C8D003CFD33 /* UIView+Frame.h */,
 				3748B8E71CF74C8D003CFD33 /* UIView+Frame.m */,
 				378475CA1CF5F19D00A5B9F4 /* UIImage+Render.h */,
@@ -636,6 +641,7 @@
 				TargetAttributes = {
 					3784755A1CF5D2AF00A5B9F4 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y8Y8JVW8T4;
 					};
 					378475731CF5D2AF00A5B9F4 = {
 						CreatedOnToolsVersion = 7.2;
@@ -675,10 +681,10 @@
 				37EDA2DF1CF8439E009F8C05 /* YYADViewController.storyboard in Resources */,
 				37D16AED1CF8A96A00D87F1B /* LaunchImage-700-568h@2x.png in Resources */,
 				37D16AF11CF8A96A00D87F1B /* LaunchImage.png in Resources */,
-				3784756E1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard in Resources */,
 				37D16AEE1CF8A96A00D87F1B /* LaunchImage-700@2x.png in Resources */,
 				37D16AF01CF8A96A00D87F1B /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				37D16AEC1CF8A96A00D87F1B /* LaunchImage-568h@2x.png in Resources */,
+				3745F3D01CFC252000B34404 /* YYSettingVC.storyboard in Resources */,
 				37D16AEF1CF8A96A00D87F1B /* LaunchImage-800-667h@2x.png in Resources */,
 				3784756B1CF5D2AF00A5B9F4 /* Assets.xcassets in Resources */,
 				37F974C71CF9F82200AEBF5F /* YYNewListCell.xib in Resources */,
@@ -847,6 +853,7 @@
 				37F974C61CF9F82200AEBF5F /* YYNewListCell.m in Sources */,
 				3748B8DB1CF7104D003CFD33 /* YYPublishViewController.m in Sources */,
 				37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */,
+				37F86C1D1CFBE359006A57F5 /* UIImage+YYimage.m in Sources */,
 				3748B8DC1CF7104D003CFD33 /* AppDelegate.m in Sources */,
 				3748B8D31CF71039003CFD33 /* UIImage+Render.m in Sources */,
 				37F974CA1CF9F85500AEBF5F /* YYNewListModel.m in Sources */,
@@ -884,17 +891,6 @@
 			targetProxy = 378475801CF5D2AF00A5B9F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3784756C1CF5D2AF00A5B9F4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3784756D1CF5D2AF00A5B9F4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		378475861CF5D2AF00A5B9F4 /* Debug */ = {
@@ -985,11 +981,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wwwying9.BuDeJie;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yy.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1001,11 +998,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wwwying9.BuDeJie;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yy.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

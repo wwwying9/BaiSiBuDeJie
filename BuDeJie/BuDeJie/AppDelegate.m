@@ -21,12 +21,12 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    YYTabBarController *bar = [[YYTabBarController alloc]init];
+    YYTabBarController *bar = [[YYTabBarController alloc]init];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass([YYADViewController class]) bundle:nil];
-    YYADViewController *bar = [sb instantiateInitialViewController];
+    //NSStringFromClass([YYADViewController class]
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"YYADViewController" bundle:[NSBundle mainBundle]];
+//    YYADViewController *bar = [sb instantiateInitialViewController];
 
-    
     self.window.rootViewController = bar;
     
     [self.window makeKeyAndVisible];

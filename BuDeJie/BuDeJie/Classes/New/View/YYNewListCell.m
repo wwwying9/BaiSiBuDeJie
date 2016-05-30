@@ -8,6 +8,7 @@
 
 #import "YYNewListCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImage+YYimage.h"
 #import "YYNewListModel.h"
 
 @interface YYNewListCell ()
@@ -22,8 +23,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    NSLog(@"%@",NSStringFromCGRect( self.iconImage.frame));
     
+    self.iconImage.layer.cornerRadius = self.iconImage.frame.size.width *0.5;
+    self.iconImage.layer.masksToBounds = YES;
     
+    //抗锯齿 (无效?)
+//    self.iconImage.layer.allowsEdgeAntialiasing = YES;
+//    self.iconImage.layer.shouldRasterize = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -45,10 +52,22 @@
     
     if (_data.image_list == nil) return;
 
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:data.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-    }];
+//    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:data.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+////        image = [UIImage imageWithBorderW:0 borderColor:[UIColor whiteColor] image:image];
+////        
+//////        self.iconImage.layer.allowsEdgeAntialiasing = true;
+//////        self.iconImage.layer.shouldRasterize = YES;
+////        
+//        self.iconImage.image = image;
+//    }];
+    
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:data.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
 }
+
+
+
+//- (void)
 
 @end

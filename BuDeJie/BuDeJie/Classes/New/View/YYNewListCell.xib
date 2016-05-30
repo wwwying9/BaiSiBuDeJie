@@ -50,6 +50,7 @@
                     <constraint firstItem="LRd-Xe-cBc" firstAttribute="leading" secondItem="bMi-Gh-mbK" secondAttribute="trailing" constant="10" id="w3m-zP-CvN"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="iconImage" destination="bMi-Gh-mbK" id="KGC-CT-Lgo"/>
                 <outlet property="nameLable" destination="LRd-Xe-cBc" id="G23-Um-GDp"/>

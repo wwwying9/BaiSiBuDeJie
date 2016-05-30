@@ -28,6 +28,9 @@
 @property(nonatomic, weak) NSTimer *timer;
 /// <#annotate#>
 @property(nonatomic, strong) YYADModel *ADModel;
+
+/// AD image
+@property(nonatomic, weak) UIImageView *ADImage;
 @end
 
 @implementation YYADViewController
@@ -48,7 +51,6 @@
     };
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(jump) userInfo:nil repeats:YES];
-    
 
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     
@@ -71,16 +73,17 @@
         if (_ADModel.h == 0) return ;
         
 //        if (_ADModel.w / _ADModel.h ) {
-//            <#statements#>
+//            statements
 //        }
 //        CGFloat h = YYScreenW / _ADModel.w * _ADModel.h;
+        
         CGFloat h = YYScreenW * _ADModel.h / _ADModel.w;
         CGFloat w = YYScreenW;
         
         
-        UIImageView *ADImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, w,h )];
-        [self.content addSubview:ADImage];
-        [ADImage sd_setImageWithURL:[NSURL URLWithString:_ADModel.w_picurl]];
+        self.ADImage.frame = CGRectMake(0, 0, w,h );
+
+//        [self.ADImage sd_setImageWithURL:[NSURL URLWithString:_ADModel.w_picurl]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"err = %@",error);
@@ -103,13 +106,44 @@
 
 - (void)jump{
     
-    static int i = 2;
+    static int i = 1;
     if (i < 0) {
         [self jumpBtnClick:nil];
     }
     _jumpBtn.titleLabel.text = [NSString stringWithFormat:@"跳过 (%is)",i];
     i --;
     
+}
+
+#pragma mark - 点按手势
+
+- (void)tap{
+    UIApplication *app = [UIApplication sharedApplication];
+    NSLog(@"url = %@",self.ADModel.ori_curl);
+    if ([app canOpenURL:[NSURL URLWithString:self.ADModel.ori_curl]]) {
+        [app  openURL:[NSURL URLWithString:self.ADModel.ori_curl]];
+    }
+//    [self.ADModel.ori_curl;]
+}
+
+#pragma mark - 懒加载
+
+-(UIImageView *)ADImage{
+    if(_ADImage == nil){
+        
+        UIImageView *imageView = [[UIImageView alloc]init];
+        [self.content addSubview:imageView];
+        
+        imageView.userInteractionEnabled = YES;
+        //添加手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+        
+        [imageView addGestureRecognizer:tap];
+        
+        
+        _ADImage = imageView;
+    }
+    return _ADImage;
 }
 
 @end

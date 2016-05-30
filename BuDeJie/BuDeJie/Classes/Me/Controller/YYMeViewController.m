@@ -41,7 +41,9 @@
 - (void)setting:(UIButton *)btn{
     YYFunc;
     
-    YYSettingVC *vc = [[YYSettingVC alloc]init];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass([YYSettingVC class]) bundle:nil];
+    YYSettingVC *vc = [sb instantiateInitialViewController];
     vc.view.backgroundColor = [UIColor orangeColor];
     
     vc.hidesBottomBarWhenPushed = YES;

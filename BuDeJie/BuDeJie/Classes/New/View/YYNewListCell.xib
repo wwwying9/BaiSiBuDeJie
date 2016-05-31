@@ -24,26 +24,28 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-Xe-cBc">
                         <rect key="frame" x="70" y="4" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-rs-EU6">
-                        <rect key="frame" x="287" y="14" width="46" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-2A-5ab">
+                        <rect key="frame" x="70" y="33" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-rs-EU6">
+                        <rect key="frame" x="290" y="15" width="41" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="+ 订阅">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-2A-5ab">
-                        <rect key="frame" x="70" y="33" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="AgB-rs-EU6" secondAttribute="trailing" constant="10" id="D9P-sK-uS8"/>
                     <constraint firstItem="bMi-Gh-mbK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I2Z-HK-ZUM"/>
                     <constraint firstItem="LRd-Xe-cBc" firstAttribute="top" secondItem="bMi-Gh-mbK" secondAttribute="top" id="Mp0-4a-vL9"/>
+                    <constraint firstItem="AgB-rs-EU6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WA3-41-3BF"/>
                     <constraint firstItem="Mdv-2A-5ab" firstAttribute="bottom" secondItem="bMi-Gh-mbK" secondAttribute="bottom" id="dSS-KC-xJI"/>
                     <constraint firstItem="bMi-Gh-mbK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="o2B-93-CzJ"/>
                     <constraint firstItem="Mdv-2A-5ab" firstAttribute="leading" secondItem="LRd-Xe-cBc" secondAttribute="leading" id="sHR-XN-Owz"/>

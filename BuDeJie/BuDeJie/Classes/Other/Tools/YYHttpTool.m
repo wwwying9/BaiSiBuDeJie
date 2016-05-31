@@ -8,13 +8,13 @@
 
 
 @implementation YYHttpTool
-+(void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
++(NSURLSessionDataTask *)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     //1.获得请求管理者
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     
     //2.发送Get请求
-    [mgr GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask * task = [mgr GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
         }
@@ -23,6 +23,8 @@
             failure(error);
         }
     }];
+    
+    return task;
 }
 
 +(NSURLSessionDataTask *)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
@@ -88,6 +90,9 @@
     
     return downloadTask;
 }
+
+
+
 
 /*
  //示例程序

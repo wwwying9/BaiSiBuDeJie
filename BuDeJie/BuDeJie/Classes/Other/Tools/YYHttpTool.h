@@ -21,7 +21,7 @@
  *  @param success 请求成功后的回调（请将请求成功后想做的事情写到这个block中）
  *  @param failure 请求失败后的回调（请将请求失败后想做的事情写到这个block中）
  */
-+ (void)get:(NSString *)url params:(NSDictionary *)params
++ (NSURLSessionDataTask *)get:(NSString *)url params:(NSDictionary *)params
                            success:(void(^)(id responseObj))success
                            failure:(void(^)(NSError *error))failure;
 
@@ -52,6 +52,8 @@
 + (NSURLSessionDownloadTask *)download:(NSString *)url
                           progress:(void (^)(NSProgress *downloadProgress))downloadProgressBlock
                  completionHandler:(void (^)(NSURLResponse *response, NSURL * filePath, NSError * error))completionHandler;
+
+
 
 @end
 

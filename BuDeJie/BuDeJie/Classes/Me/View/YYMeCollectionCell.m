@@ -39,6 +39,21 @@
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:dataModel.icon]];
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    CGFloat space = 5;
+    CGFloat lableHeight = 20;
+    CGFloat width = self.xmg_width;
+    
+    //计算iconWidth
+    CGFloat iconWidth = width - space * 2 - lableHeight;
+    self.iconImage.frame = CGRectMake((width - iconWidth) / 2, space, iconWidth, iconWidth);
+    self.nameLable.frame = CGRectMake(0, CGRectGetMaxY(self.iconImage.frame) + space, width, lableHeight);
+
+}
+
 //- (void)
 
 @end

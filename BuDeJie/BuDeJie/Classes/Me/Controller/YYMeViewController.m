@@ -13,6 +13,8 @@
 #import "YYMeModel.h"
 #import <MJExtension.h>
 #import "YYMeCollectionCell.h"
+#import <WebKit/WebKit.h>
+#import "YYMeWebVC.h"
 
 @interface YYMeViewController ()<UICollectionViewDataSource , UICollectionViewDelegate>
 
@@ -20,7 +22,7 @@
 @property(nonatomic, weak) UICollectionView *collectionView;
 
 /// data
-@property(nonatomic, strong) NSArray *dataArray;
+@property(nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -67,6 +69,8 @@ static const CGFloat spacing = 1;
         self.dataArray = [YYMeModel mj_objectArrayWithKeyValuesArray:tempArray];
 //        NSLog(@"modle = %@", )
         
+        [self processData];
+        
         [self.collectionView reloadData];
         
         //计算高度
@@ -82,6 +86,21 @@ static const CGFloat spacing = 1;
     
 }
 
+- (void)processData{
+
+    NSInteger number = self.dataArray.count % count;
+    
+    if (number == 0) return;
+    
+    number = count - number;
+    
+    for (int i = 0; i < number; i++) {
+        [self.dataArray addObject:[[YYMeModel alloc]init]];
+    }
+    
+}
+
+#pragma mark - 底部视图
 - (UIView *)footerView{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
@@ -147,6 +166,23 @@ static const CGFloat spacing = 1;
 
     cell.backgroundColor = [UIColor whiteColor];
     return cell;
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    YYFunc;
+//    UIApplication *app = [UIApplication sharedApplication];
+    //    NSLog(@"url = %@",self.dataArray.ori_curl);
+    YYMeModel *model = self.dataArray[indexPath.row];
+    
+    if ([model.url containsString:@"mod://"]) return;
+    
+    YYMeWebVC *webVC = [[YYMeWebVC alloc]init];
+    webVC.url = model.url;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
+    
+    
 }
 
 

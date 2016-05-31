@@ -13,38 +13,24 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="245" height="174"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nM-dF-xdW">
-                        <rect key="frame" x="102" y="156" width="42" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="qLS-ZG-AFo"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yu-ny-18R">
+                        <rect key="frame" x="98" y="5" width="50" height="146"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nM-dF-xdW">
+                        <rect key="frame" x="101" y="156" width="42" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yu-ny-18R">
-                        <rect key="frame" x="98" y="5" width="50" height="146"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="QJn-4f-TzM"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <constraints>
-                <constraint firstItem="5nM-dF-xdW" firstAttribute="top" secondItem="5yu-ny-18R" secondAttribute="bottom" constant="5" id="BHT-7t-Kl8"/>
-                <constraint firstItem="5nM-dF-xdW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PlE-L4-381"/>
-                <constraint firstItem="5yu-ny-18R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="gMT-Io-jSl"/>
-                <constraint firstAttribute="bottom" secondItem="5nM-dF-xdW" secondAttribute="bottom" id="szd-aG-kAm"/>
-                <constraint firstItem="5yu-ny-18R" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vMG-hr-CDE"/>
-            </constraints>
             <size key="customSize" width="245" height="174"/>
             <connections>
                 <outlet property="iconImage" destination="5yu-ny-18R" id="y1L-J9-Snf"/>
-                <outlet property="iconImageWidth" destination="QJn-4f-TzM" id="5Wm-c9-Qf3"/>
                 <outlet property="nameLable" destination="5nM-dF-xdW" id="7Zg-XW-hTW"/>
             </connections>
-            <point key="canvasLocation" x="407.5" y="397"/>
+            <point key="canvasLocation" x="270.5" y="351"/>
         </collectionViewCell>
     </objects>
 </document>

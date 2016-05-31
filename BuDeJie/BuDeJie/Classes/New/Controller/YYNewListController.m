@@ -16,8 +16,11 @@
 
 @interface YYNewListController ()
 
-/// <#annotate#>
+
 @property(nonatomic, strong) NSArray *dataArray;
+///网络请求
+@property(nonatomic, weak) NSURLSessionDataTask *task;
+
 @end
 
 @implementation YYNewListController
@@ -38,6 +41,11 @@ static NSString  * const cellID = @"list";
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"YYNewListCell" bundle:nil]  forCellReuseIdentifier:cellID];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 设置tableView背景色
+    self.tableView.backgroundColor = [UIColor grayColor];
+    
     
     //发送请求
     NSString *url = @"http://api.budejie.com/api/api_open.php";
@@ -48,7 +56,7 @@ static NSString  * const cellID = @"list";
     dict[@"c"] = @"topic";
     dict[@"action"] = @"sub";
     
-    [YYHttpTool get:url params:dict success:^(NSDictionary *responseObj) {
+   self.task = [YYHttpTool get:url params:dict success:^(NSDictionary *responseObj) {
         
 //        NSLog(@"%@",responseObj);
         
@@ -68,6 +76,9 @@ static NSString  * const cellID = @"list";
     [super  viewWillDisappear:animated];
     
     [SVProgressHUD dismiss];
+    
+    // 取消请求
+    [_task cancel];
 }
 
 
@@ -77,13 +88,7 @@ static NSString  * const cellID = @"list";
         return self.dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    YYNewListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    
-    cell.data = self.dataArray[indexPath.row];
-    
-    return cell;
-}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
@@ -94,6 +99,19 @@ static NSString  * const cellID = @"list";
     YYFunc;
 //    YYNewListModel *model = self.dataArray[indexPath.row];
 
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    YYNewListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    
+    //    cell.data = self.dataArray[indexPath.row];
+    return cell;
+}
+//优化cell,数据绑定放在这里
+-(void)tableView:(UITableView *)tableView willDisplayCell:(YYNewListCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    cell.data = self.dataArray[indexPath.row];
 }
 
 @end

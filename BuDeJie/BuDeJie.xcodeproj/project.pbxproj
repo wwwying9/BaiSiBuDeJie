@@ -47,6 +47,9 @@
 		37F974C61CF9F82200AEBF5F /* YYNewListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974C41CF9F82200AEBF5F /* YYNewListCell.m */; };
 		37F974C71CF9F82200AEBF5F /* YYNewListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F974C51CF9F82200AEBF5F /* YYNewListCell.xib */; };
 		37F974CA1CF9F85500AEBF5F /* YYNewListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F974C91CF9F85500AEBF5F /* YYNewListModel.m */; };
+		37FFF6061CFD68A7009466D6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FFF6051CFD68A7009466D6 /* WebKit.framework */; };
+		37FFF60A1CFD6B7B009466D6 /* YYMeWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FFF6081CFD6B7B009466D6 /* YYMeWebVC.m */; };
+		37FFF60B1CFD6B7B009466D6 /* YYMeWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FFF6091CFD6B7B009466D6 /* YYMeWebVC.xib */; };
 		4D745B68824CBD0DD984D2BB /* libPods-BuDeJieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E25791D8137EB168242D5C83 /* libPods-BuDeJieUITests.a */; };
 		E2562096EAB1F760A4727176 /* libPods-BuDeJieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AE77877CA7D3C50852AD0F /* libPods-BuDeJieTests.a */; };
 /* End PBXBuildFile section */
@@ -138,6 +141,10 @@
 		37F974C51CF9F82200AEBF5F /* YYNewListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYNewListCell.xib; sourceTree = "<group>"; };
 		37F974C81CF9F85500AEBF5F /* YYNewListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNewListModel.h; sourceTree = "<group>"; };
 		37F974C91CF9F85500AEBF5F /* YYNewListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNewListModel.m; sourceTree = "<group>"; };
+		37FFF6051CFD68A7009466D6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		37FFF6071CFD6B7B009466D6 /* YYMeWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMeWebVC.h; sourceTree = "<group>"; };
+		37FFF6081CFD6B7B009466D6 /* YYMeWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMeWebVC.m; sourceTree = "<group>"; };
+		37FFF6091CFD6B7B009466D6 /* YYMeWebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYMeWebVC.xib; sourceTree = "<group>"; };
 		69C28B2BAC0CFB1AEBE73172 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		6BBBB387C85011E96E96BD93 /* Pods-BuDeJieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJieTests/Pods-BuDeJieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DB8E995D1D94AEF91B55B01 /* Pods-BuDeJieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJieUITests/Pods-BuDeJieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FFF6061CFD68A7009466D6 /* WebKit.framework in Frameworks */,
 				024FD17A17DEEC99906430CE /* libPods-BuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +188,7 @@
 		2DA13CC3C5204A3792371F72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37FFF6051CFD68A7009466D6 /* WebKit.framework */,
 				D36AF245B4C87DD191B62256 /* libPods-BuDeJie.a */,
 				C5AE77877CA7D3C50852AD0F /* libPods-BuDeJieTests.a */,
 				E25791D8137EB168242D5C83 /* libPods-BuDeJieUITests.a */,
@@ -385,6 +394,9 @@
 				378475B81CF5EB6D00A5B9F4 /* YYMeViewController.h */,
 				378475B91CF5EB6D00A5B9F4 /* YYMeViewController.m */,
 				3745F3CF1CFC252000B34404 /* YYMeViewController.storyboard */,
+				37FFF6071CFD6B7B009466D6 /* YYMeWebVC.h */,
+				37FFF6081CFD6B7B009466D6 /* YYMeWebVC.m */,
+				37FFF6091CFD6B7B009466D6 /* YYMeWebVC.xib */,
 				37D16AE11CF8974600D87F1B /* YYSettingVC.h */,
 				37D16AE21CF8974600D87F1B /* YYSettingVC.m */,
 				3745F3D11CFC2F7D00B34404 /* YYSettingVC.storyboard */,
@@ -703,6 +715,7 @@
 				3745F3D21CFC2F7D00B34404 /* YYSettingVC.storyboard in Resources */,
 				3745F3D01CFC252000B34404 /* YYMeViewController.storyboard in Resources */,
 				37D16AEF1CF8A96A00D87F1B /* LaunchImage-800-667h@2x.png in Resources */,
+				37FFF60B1CFD6B7B009466D6 /* YYMeWebVC.xib in Resources */,
 				3745F3DD1CFC7C1C00B34404 /* YYMeCollectionCell.xib in Resources */,
 				3784756B1CF5D2AF00A5B9F4 /* Assets.xcassets in Resources */,
 				37F974C71CF9F82200AEBF5F /* YYNewListCell.xib in Resources */,
@@ -865,6 +878,7 @@
 				3748B8DE1CF710A0003CFD33 /* main.m in Sources */,
 				3745F3D81CFC7A8F00B34404 /* YYMeModel.m in Sources */,
 				3748B8D51CF7104D003CFD33 /* YYNavigationController.m in Sources */,
+				37FFF60A1CFD6B7B009466D6 /* YYMeWebVC.m in Sources */,
 				3748B8D71CF7104D003CFD33 /* YYEssenceViewController.m in Sources */,
 				3748B8D81CF7104D003CFD33 /* YYFriendTrendViewController.m in Sources */,
 				3748B8D91CF7104D003CFD33 /* YYMeViewController.m in Sources */,

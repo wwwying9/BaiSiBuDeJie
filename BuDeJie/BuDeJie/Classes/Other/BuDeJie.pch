@@ -9,14 +9,25 @@
 
 #import "UIView+Frame.h"
 
+//公共头文件
+#import "YYConst.h"
+
+//color
+#define YYColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define YYGlobeColor YYColor(215, 215, 215)
+#define YYRandomColor YYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+//屏幕尺寸
 #define YYScreenH [UIScreen mainScreen].bounds.size.height
 #define YYScreenW [UIScreen mainScreen].bounds.size.width
 
+//屏幕适配
 #define iphone4  (YYScreenH == 480)
 #define iphone5  (YYScreenH == 568)
 #define iphone6  (YYScreenH == 667)
 #define iphone6P (YYScreenH == 736)
 
+//log
 #ifdef DEBUG
 #define YYFunc YYLog(@"%s",__func__)
 #define YYLog(...) NSLog(__VA_ARGS__)

@@ -29,6 +29,11 @@
 		3784756B1CF5D2AF00A5B9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3784756A1CF5D2AF00A5B9F4 /* Assets.xcassets */; };
 		378475791CF5D2AF00A5B9F4 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475781CF5D2AF00A5B9F4 /* BuDeJieTests.m */; };
 		378475841CF5D2AF00A5B9F4 /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378475831CF5D2AF00A5B9F4 /* BuDeJieUITests.m */; };
+		378626501D0075F300EB7523 /* YYAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786264F1D0075F300EB7523 /* YYAllViewController.m */; };
+		378626531D00761E00EB7523 /* YYPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378626521D00761E00EB7523 /* YYPictureViewController.m */; };
+		378626561D00763400EB7523 /* YYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378626551D00763400EB7523 /* YYVideoViewController.m */; };
+		378626591D00764600EB7523 /* YYWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378626581D00764600EB7523 /* YYWordViewController.m */; };
+		3786265C1D008B3200EB7523 /* YYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786265B1D008B3200EB7523 /* YYConst.m */; };
 		37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D16AE21CF8974600D87F1B /* YYSettingVC.m */; };
 		37D16AEC1CF8A96A00D87F1B /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D16AE51CF8A96A00D87F1B /* LaunchImage-568h@2x.png */; };
 		37D16AED1CF8A96A00D87F1B /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D16AE61CF8A96A00D87F1B /* LaunchImage-700-568h@2x.png */; };
@@ -114,6 +119,16 @@
 		378475BF1CF5EC3D00A5B9F4 /* YYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPublishViewController.m; sourceTree = "<group>"; };
 		378475CA1CF5F19D00A5B9F4 /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
 		378475CB1CF5F19D00A5B9F4 /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
+		3786264E1D0075F300EB7523 /* YYAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAllViewController.h; sourceTree = "<group>"; };
+		3786264F1D0075F300EB7523 /* YYAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAllViewController.m; sourceTree = "<group>"; };
+		378626511D00761E00EB7523 /* YYPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPictureViewController.h; sourceTree = "<group>"; };
+		378626521D00761E00EB7523 /* YYPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPictureViewController.m; sourceTree = "<group>"; };
+		378626541D00763400EB7523 /* YYVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYVideoViewController.h; sourceTree = "<group>"; };
+		378626551D00763400EB7523 /* YYVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYVideoViewController.m; sourceTree = "<group>"; };
+		378626571D00764600EB7523 /* YYWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWordViewController.h; sourceTree = "<group>"; };
+		378626581D00764600EB7523 /* YYWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWordViewController.m; sourceTree = "<group>"; };
+		3786265A1D008B3200EB7523 /* YYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYConst.h; sourceTree = "<group>"; };
+		3786265B1D008B3200EB7523 /* YYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYConst.m; sourceTree = "<group>"; };
 		37D16AE11CF8974600D87F1B /* YYSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSettingVC.h; sourceTree = "<group>"; };
 		37D16AE21CF8974600D87F1B /* YYSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSettingVC.m; sourceTree = "<group>"; };
 		37D16AE51CF8A96A00D87F1B /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
@@ -288,6 +303,14 @@
 			children = (
 				378475AF1CF5DABC00A5B9F4 /* YYEssenceViewController.h */,
 				378475B01CF5DABC00A5B9F4 /* YYEssenceViewController.m */,
+				3786264E1D0075F300EB7523 /* YYAllViewController.h */,
+				3786264F1D0075F300EB7523 /* YYAllViewController.m */,
+				378626511D00761E00EB7523 /* YYPictureViewController.h */,
+				378626521D00761E00EB7523 /* YYPictureViewController.m */,
+				378626541D00763400EB7523 /* YYVideoViewController.h */,
+				378626551D00763400EB7523 /* YYVideoViewController.m */,
+				378626571D00764600EB7523 /* YYWordViewController.h */,
+				378626581D00764600EB7523 /* YYWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,6 +525,8 @@
 				3748B8E51CF71D8D003CFD33 /* BuDeJie.pch */,
 				37F974B41CF9D5A400AEBF5F /* Tools */,
 				378475C91CF5F18000A5B9F4 /* Category */,
+				3786265A1D008B3200EB7523 /* YYConst.h */,
+				3786265B1D008B3200EB7523 /* YYConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -867,14 +892,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378626501D0075F300EB7523 /* YYAllViewController.m in Sources */,
 				3748B8E81CF74C8D003CFD33 /* UIView+Frame.m in Sources */,
 				37D16AE31CF8974600D87F1B /* YYSettingVC.m in Sources */,
 				3748B8E11CF7126B003CFD33 /* YYTabBar.m in Sources */,
 				37F974BD1CF9F56100AEBF5F /* YYNewListController.m in Sources */,
+				378626591D00764600EB7523 /* YYWordViewController.m in Sources */,
+				378626531D00761E00EB7523 /* YYPictureViewController.m in Sources */,
 				37F974B71CF9D5AF00AEBF5F /* YYHttpTool.m in Sources */,
 				3748B8E01CF71267003CFD33 /* YYTabBarController.m in Sources */,
 				3748B8F71CF764D6003CFD33 /* UIBarButtonItem+YYItem.m in Sources */,
 				37EDA2D41CF7FBF6009F8C05 /* YYTempVC.m in Sources */,
+				3786265C1D008B3200EB7523 /* YYConst.m in Sources */,
 				3748B8DE1CF710A0003CFD33 /* main.m in Sources */,
 				3745F3D81CFC7A8F00B34404 /* YYMeModel.m in Sources */,
 				3748B8D51CF7104D003CFD33 /* YYNavigationController.m in Sources */,
@@ -887,6 +916,7 @@
 				37F974C61CF9F82200AEBF5F /* YYNewListCell.m in Sources */,
 				3748B8DB1CF7104D003CFD33 /* YYPublishViewController.m in Sources */,
 				37F974BA1CF9E29100AEBF5F /* YYADModel.m in Sources */,
+				378626561D00763400EB7523 /* YYVideoViewController.m in Sources */,
 				37F86C1D1CFBE359006A57F5 /* UIImage+YYimage.m in Sources */,
 				3748B8DC1CF7104D003CFD33 /* AppDelegate.m in Sources */,
 				3748B8D31CF71039003CFD33 /* UIImage+Render.m in Sources */,
